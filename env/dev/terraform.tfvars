@@ -145,7 +145,7 @@ mssql_servers = {
     location                     = "west us"
     version                      = "12.0"
     administrator_login          = "satya"
-    administrator_login_password = "Satya@834068"
+    administrator_login_password = "NewPassword&&2345"
   }
 }
 
@@ -162,3 +162,4 @@ mssql_databases = {
   }
 
 }
+
