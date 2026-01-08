@@ -10,8 +10,8 @@ permissions:
 env:
   TF_WORKING_DIR: ./env/dev/
   STORAGE_RG: "satya-rg"
-  STORAGE_ACCOUNT: "satyastoghf"
-  CONTAINER_NAME: "container"
+  STORAGE_ACCOUNT: "storeagebox"
+  CONTAINER_NAME: "lockerbox"
   STATE_FILE: "aksinfra.tfstate"
 
 jobs:
