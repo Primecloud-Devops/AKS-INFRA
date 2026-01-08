@@ -1,6 +1,6 @@
 resource_groups = {
   rg1 = {
-    name     = "satya-rg"
+    name     = "sp-rg"
     location = "west us"
   }
 }
@@ -8,7 +8,7 @@ resource_groups = {
 container_registries = {
   acr1 = {
     name                = "todoaksacrspsingh"
-    resource_group_name = "satya-rg"
+    resource_group_name = "sp-rg"
     location            = "west us"
     sku                 = "Standard"
   }
@@ -17,7 +17,7 @@ container_registries = {
 public_ips = {
   pip1 = {
     name                = "todo-aks-pip"
-    resource_group_name = "satya-rg"
+    resource_group_name = "sp-rg"
     location            = "west us"
     allocation_method   = "Static"
   }
@@ -28,7 +28,7 @@ virtual_networks = {
     name                = "todo-aks-vnet"
     address_space       = ["10.0.0.0/16"]
     location            = "west us"
-    resource_group_name = "satya-rg"
+    resource_group_name = "sp-rg"
     subnets = {
       subnet1 = {
         name             = "todo-aks-subnet"
@@ -45,7 +45,7 @@ virtual_networks = {
 application_gateways = {
   appgw1 = {
     name                = "todo-aks-appgw"
-    resource_group_name = "satya-rg"
+    resource_group_name = "sp-rg"
     location            = "west us"
     sku = {
       name     = "Standard_v2"
@@ -111,7 +111,7 @@ application_gateways = {
 kubernetes_clusters = {
   aks1 = {
     ingress_application_gateway_name = "todo-aks-appgw"
-    resource_group_name              = "satya-rg"
+    resource_group_name              = "sp-rg"
     container_registry_name         = "todoaksacrspsingh"
     acr_pull_role_name               = "AcrPull"
     skip_aad_check                   = true
@@ -141,7 +141,7 @@ kubernetes_clusters = {
 mssql_servers = {
   mssql1 = {
     name                         = "todo-aksmssqlserver007"
-    resource_group_name          = "satya-rg"
+    resource_group_name          = "sp-rg"
     location                     = "west us"
     version                      = "12.0"
     administrator_login          = "satya"
@@ -152,7 +152,7 @@ mssql_servers = {
 mssql_databases = {
   mysqldb1 = {
     name           = "todo-aksmssqldb007"
-    resource_group_name = "satya-rg"
+    resource_group_name = "sp-rg"
     server_name    = "todo-aksmssqlserver007"
     collation      = "SQL_Latin1_General_CP1_CI_AS"
     license_type   = "LicenseIncluded"
@@ -160,4 +160,5 @@ mssql_databases = {
     sku_name      = "S0"
     enclave_type  = "VBS"
   }
+
 }
