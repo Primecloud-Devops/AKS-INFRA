@@ -1,7 +1,7 @@
 resource_groups = {
   rg1 = {
     name     = "sp-rg"
-    location = "west us"
+    location = "central india"
   }
 }
 
@@ -9,7 +9,7 @@ container_registries = {
   acr1 = {
     name                = "todoaksacrspsingh"
     resource_group_name = "sp-rg"
-    location            = "west us"
+    location            = "central india"
     sku                 = "Standard"
   }
 }
@@ -18,7 +18,7 @@ public_ips = {
   pip1 = {
     name                = "todo-aks-pip"
     resource_group_name = "sp-rg"
-    location            = "west us"
+    location            = "central india"
     allocation_method   = "Static"
   }
 }
@@ -27,7 +27,7 @@ virtual_networks = {
   vnet1 = {
     name                = "todo-aks-vnet"
     address_space       = ["10.0.0.0/16"]
-    location            = "west us"
+    location            = "central india"
     resource_group_name = "sp-rg"
     subnets = {
       subnet1 = {
@@ -46,7 +46,7 @@ application_gateways = {
   appgw1 = {
     name                = "todo-aks-appgw"
     resource_group_name = "sp-rg"
-    location            = "west us"
+    location            = "central india"
     sku = {
       name     = "Standard_v2"
       tier     = "Standard_v2"
@@ -116,7 +116,7 @@ kubernetes_clusters = {
     acr_pull_role_name               = "AcrPull"
     skip_aad_check                   = true
     name                             = "todo-aks-aks"
-    location                         = "west us"
+    location                         = "central india"
     dns_prefix                       = "todo-aks"
     kubernetes_version               = "1.32.5"
     default_node_pool = {
@@ -142,7 +142,7 @@ mssql_servers = {
   mssql1 = {
     name                         = "todo-aksmssqlserver007"
     resource_group_name          = "sp-rg"
-    location                     = "west us"
+    location                     = "central india"
     version                      = "12.0"
     administrator_login          = "satya"
     administrator_login_password = "NewPassword&&2345"
