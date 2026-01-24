@@ -26,7 +26,7 @@ public_ips = {
 virtual_networks = {
   vnet1 = {
     name                = "todo-aks-vnet"
-    address_spsace       = ["10.0.0.0/16"]
+    address_spaces       = ["10.0.0.0/16"]
     location            = "central india"
     resource_group_name = "sps-rg"
     subnets = {
@@ -162,4 +162,5 @@ mssql_databases = {
   }
 
 }
+
 
