@@ -9,10 +9,10 @@ permissions:
 
 env:
   TF_WORKING_DIR: ./env/dev/
-  STORAGE_RG: "satya-rg"
-  STORAGE_ACCOUNT: "storeagebox"
-  CONTAINER_NAME: "lockerbox"
-  STATE_FILE: "practiceaksinfra.tfstate"
+  STORAGE_RG: "try-rg"
+  STORAGE_ACCOUNT: "storage1236780"
+  CONTAINER_NAME: "dibba"
+  STATE_FILE: "aksinfra.tfstate"
 
 jobs:
   aksinfra:
