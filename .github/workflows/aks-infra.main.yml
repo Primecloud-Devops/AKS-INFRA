@@ -12,7 +12,7 @@ env:
   STORAGE_RG: "satya-rg"
   STORAGE_ACCOUNT: "storeagebox"
   CONTAINER_NAME: "lockerbox"
-  STATE_FILE: "aksinfra.tfstate"
+  STATE_FILE: "practiceaksinfra.tfstate"
 
 jobs:
   aksinfra:
