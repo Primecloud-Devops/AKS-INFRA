@@ -1,37 +1,37 @@
 resource_groups = {
   rg1 = {
-    name     = "spa-rg"
-    location = "central india"
+    name     = "pro-rg"
+    location = "Canada Central"
   }
 }
 
 container_registries = {
   acr1 = {
-    name                = "todoaksacrspasingh"
-    resource_group_name = "spa-rg"
-    location            = "central india"
+    name                = "kikiaksacr"
+    resource_group_name = "pro-rg"
+    location            = "Canada Central"
     sku                 = "Standard"
   }
 }
 
 public_ips = {
   pip1 = {
-    name                = "todo-aks-pip"
-    resource_group_name = "spa-rg"
-    location            = "central india"
+    name                = "kiki-aks-pip"
+    resource_group_name = "pro-rg"
+    location            = "Canada Central"
     allocation_method   = "Static"
   }
 }
 
 virtual_networks = {
   vnet1 = {
-    name                = "todo-aks-vnet"
+    name                = "kiki-aks-vnet"
     address_spaces       = ["10.0.0.0/16"]
-    location            = "central india"
-    resource_group_name = "spa-rg"
+    location            = "Canada Central"
+    resource_group_name = "pro-rg"
     subnets = {
       subnet1 = {
-        name             = "todo-aks-subnet"
+        name             = "kiki-aks-subnet"
         address_prefixes = ["10.0.1.0/24"]
       }
       subnet2 = {
@@ -44,9 +44,9 @@ virtual_networks = {
 
 application_gateways = {
   appgw1 = {
-    name                = "todo-aks-appgw"
-    resource_group_name = "spa-rg"
-    location            = "central india"
+    name                = "kiki-aks-appgw"
+    resource_group_name = "pro-rg"
+    location            = "Canada Central"
     sku = {
       name     = "Standard_v2"
       tier     = "Standard_v2"
@@ -58,8 +58,8 @@ application_gateways = {
       subnet_name = "appgw-subnet"
     }
 
-    virtual_network_name = "todo-aks-vnet"
-    public_ip_name       = "todo-aks-pip"
+    virtual_network_name = "kiki-aks-vnet"
+    public_ip_name       = "kiki-aks-pip"
     frontend_ports = {
       port1 = {
         name = "frontendPort1"
@@ -110,14 +110,14 @@ application_gateways = {
 
 kubernetes_clusters = {
   aks1 = {
-    ingress_application_gateway_name = "todo-aks-appgw"
-    resource_group_name              = "spa-rg"
-    container_registry_name         = "todoaksacrspasingh"
+    ingress_application_gateway_name = "kiki-aks-appgw"
+    resource_group_name              = "pro-rg"
+    container_registry_name         = "kikiaksacr"
     acr_pull_role_name               = "AcrPull"
     skip_aad_check                   = true
-    name                             = "todo-aks-aks"
-    location                         = "central india"
-    dns_prefix                       = "todo-aks"
+    name                             = "kiki-aks-aks"
+    location                         = "Canada Central"
+    dns_prefix                       = "kiki-aks"
     kubernetes_version               = "1.32.5"
     default_node_pool = {
       name                 = "default"
@@ -140,9 +140,9 @@ kubernetes_clusters = {
 
 mssql_servers = {
   mssql1 = {
-    name                         = "todo-aksmssqlserver007"
-    resource_group_name          = "spa-rg"
-    location                     = "central india"
+    name                         = "kiki-aksmssqlserver007"
+    resource_group_name          = "pro-rg"
+    location                     = "Canada Central"
     version                      = "12.0"
     administrator_login          = "satya"
     administrator_login_password = "NewPassword&&2345"
@@ -151,9 +151,9 @@ mssql_servers = {
 
 mssql_databases = {
   mysqldb1 = {
-    name           = "todo-aksmssqldb007"
-    resource_group_name = "spa-rg"
-    server_name    = "todo-aksmssqlserver007"
+    name           = "kiki-aksmssqldb007"
+    resource_group_name = "pro-rg"
+    server_name    = "kiki-aksmssqlserver007"
     collation      = "SQL_Latin1_General_CP1_CI_AS"
     license_type   = "LicenseIncluded"
     max_size_gb   = 2
